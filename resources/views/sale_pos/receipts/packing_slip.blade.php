@@ -1,246 +1,243 @@
-<table style="width:100%; color: #000000 !important;">
-    <thead>
-        <tr>
-            <td>
-                <p class="text-center color-555 font-23">
-                    @lang('lang_v1.packing_slip')
-                </p>
-            </td>
-        </tr>
-    </thead>
+<div class="ticket packing-slip-ticket">
+    <p class="centered headings">
+        @lang('lang_v1.packing_slip')
+    </p>
 
-    <tbody>
-        <tr>
-            <td>
+    <div class="border-top textbox-info">
+        @if(!empty($receipt_details->invoice_no_prefix))
+            <p class="f-left"><strong>{!! $receipt_details->invoice_no_prefix !!}</strong></p>
+        @endif
+        <p class="f-right">{{ $receipt_details->invoice_no }}</p>
+    </div>
 
-                <!-- business information here -->
-                <div class="row invoice-info">
-
-                    <div class="col-md-6 invoice-col width-50 color-555">
-
-                        <!-- Logo -->
-                        {{-- @if(!empty($receipt_details->logo))
-                            <img style="max-height: 120px; width: auto;" src="{{$receipt_details->logo}}" class="img">
-                            <br/>
-                        @endif
-
-                        <!-- Shop & Location Name  -->
-                        @if(!empty($receipt_details->display_name))
-                            <p>
-                                <span style="font-size:24px; font-weight:900; color:black;">{{$receipt_details->display_name}}</span>
-                                @if(!empty($receipt_details->address))
-                                    <br/>{!! $receipt_details->address !!}
-                                @endif
-
-                                @if(!empty($receipt_details->contact))
-                                    <br/>{!! $receipt_details->contact !!}
-                                @endif
-
-                                @if(!empty($receipt_details->website))
-                                    <br/>{{ $receipt_details->website }}
-                                @endif
-
-                                @if(!empty($receipt_details->tax_info1))
-                                    <br/>{{ $receipt_details->tax_label1 }} {{ $receipt_details->tax_info1 }}
-                                @endif
-
-                                @if(!empty($receipt_details->tax_info2))
-                                    <br/>{{ $receipt_details->tax_label2 }} {{ $receipt_details->tax_info2 }}
-                                @endif
-
-                                @if(!empty($receipt_details->location_custom_fields))
-                                    <br/>{{ $receipt_details->location_custom_fields }}
-                                @endif
-                            </p>
-                        @endif --}}
-                    </div>
-
-                    <div class="col-md-6 invoice-col width-50">
-
-                        <p class="text-right font-23">
-                            @if(!empty($receipt_details->invoice_no_prefix))
-                                <span class="pull-left">{!! $receipt_details->invoice_no_prefix !!}</span>
-                            @endif
-
-                            {{$receipt_details->invoice_no}}
-                        </p>
-
-                        @if(!empty($receipt_details->table_name))
-                            <p class="text-right font-23">
-                                <span class="pull-left">
-                                    Table Label:
-                                </span>
-
-                                {{ $receipt_details->table_name }}
-                            </p>
-                        @endif
-
-                        <!-- Date -->
-                        @if(!empty($receipt_details->date_label))
-                            <p class="text-right font-23 color-555">
-                                <span class="pull-left">
-                                    {{$receipt_details->date_label}}
-                                </span>
-
-                                {{$receipt_details->invoice_date}}
-                            </p>
-                        @endif                        
-                    </div>
-                </div>
-
-                {{-- <div class="row invoice-info color-555">
-                    <br/>
-                    <div class="col-md-6 invoice-col width-50 word-wrap">
-                        @if(!empty($receipt_details->customer_label))
-                            <b>{{ $receipt_details->customer_label }}</b><br/>
-                        @endif
-
-                        <!-- customer info -->
-                        @if(!empty($receipt_details->customer_name))
-                            {{ $receipt_details->customer_name }}<br>
-                        @endif
-                        @if(!empty($receipt_details->customer_info))
-                            {!! $receipt_details->customer_info !!}
-                        @endif
-                        @if(!empty($receipt_details->client_id_label))
-                            <br/>
-                            <strong>{{ $receipt_details->client_id_label }}</strong> {{ $receipt_details->client_id }}
-                        @endif
-                        @if(!empty($receipt_details->customer_tax_label))
-                            <br/>
-                            <strong>{{ $receipt_details->customer_tax_label }}</strong> {{ $receipt_details->customer_tax_number }}
-                        @endif
-                        @if(!empty($receipt_details->customer_custom_fields))
-                            <br/>{!! $receipt_details->customer_custom_fields !!}
-                        @endif
-                        @if(!empty($receipt_details->sales_person_label))
-                            <br/>
-                            <strong>{{ $receipt_details->sales_person_label }}</strong> {{ $receipt_details->sales_person }}
-                        @endif
-                    </div>
-
-                    <div class="col-md-6 invoice-col width-50 word-wrap">
-                        <strong>@lang('lang_v1.shipping_address'):</strong><br>
-                        {!! $receipt_details->shipping_address !!}
-                        @if(!empty($receipt_details->shipping_custom_field_1_label))
-                            <br><strong>{!!$receipt_details->shipping_custom_field_1_label!!} :</strong> {!!$receipt_details->shipping_custom_field_1_value ?? ''!!}
-                        @endif
-
-                        @if(!empty($receipt_details->shipping_custom_field_2_label))
-                            <br><strong>{!!$receipt_details->shipping_custom_field_2_label!!}:</strong> {!!$receipt_details->shipping_custom_field_2_value ?? ''!!}
-                        @endif
-
-                        @if(!empty($receipt_details->shipping_custom_field_3_label))
-                            <br><strong>{!!$receipt_details->shipping_custom_field_3_label!!}:</strong> {!!$receipt_details->shipping_custom_field_3_value ?? ''!!}
-                        @endif
-
-                        @if(!empty($receipt_details->shipping_custom_field_4_label))
-                            <br><strong>{!!$receipt_details->shipping_custom_field_4_label!!}:</strong> {!!$receipt_details->shipping_custom_field_4_value ?? ''!!}
-                        @endif
-
-                        @if(!empty($receipt_details->shipping_custom_field_5_label))
-                            <br><strong>{!!$receipt_details->shipping_custom_field_2_label!!}:</strong> {!!$receipt_details->shipping_custom_field_5_value ?? ''!!}
-                        @endif
-                    </div>
-                </div> --}}
-
-                <div class="row color-555">
-                    <div class="col-xs-12">
-                        <br/>
-                        <table class="table table-bordered table-no-top-cell-border">
-                            <thead>
-                                <tr style="background-color: #357ca5 !important; color: white !important; font-size: 20px !important" class="table-no-side-cell-border table-no-top-cell-border text-center">
-                                    <td style="background-color: #357ca5 !important; color: white !important; width: 5% !important">#</td>
-
-                                    <td style="background-color: #357ca5 !important; color: white !important; width: 65% !important">
-                                        {{$receipt_details->table_product_label}}
-                                    </td>
-
-                                    <td style="background-color: #357ca5 !important; color: white !important; width: 30% !important;">
-                                        {{$receipt_details->table_qty_label}}
-                                    </td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($receipt_details->lines as $line)
-                                    <tr>
-                                        <td class="text-center">
-                                            {{$loop->iteration}}
-                                        </td>
-                                        <td style="word-break: break-all;">
-                                            {{$line['name']}} {{$line['product_variation']}} {{$line['variation']}}
-                                            @if(!empty($line['sub_sku'])), {{$line['sub_sku']}} @endif
-                                            @if(!empty($line['brand'])), {{$line['brand']}} @endif
-                                            @if(!empty($line['product_custom_fields'])), {{$line['product_custom_fields']}} @endif
-                                            @if(!empty($line['sell_line_note']))({!!$line['sell_line_note']!!}) @endif
-                                            @if(!empty($line['lot_number']))<br> {{$line['lot_number_label']}}: {{$line['lot_number']}} @endif
-                                            @if(!empty($line['product_expiry'])), {{$line['product_expiry_label']}}: {{$line['product_expiry']}} @endif
-                                        </td>
-                                        <td class="text-right">
-                                            {{$line['quantity']}} {{$line['units']}}
-                                        </td>
-                                    </tr>
-                                    @if(!empty($line['modifiers']))
-                                        @foreach($line['modifiers'] as $modifier)
-                                            <tr>
-                                                <td class="text-center">
-                                                    &nbsp;
-                                                </td>
-                                                <td>
-                                                    {{$modifier['name']}} {{$modifier['variation']}}
-                                                    @if(!empty($modifier['sub_sku'])), {{$modifier['sub_sku']}} @endif
-                                                    @if(!empty($modifier['sell_line_note']))({!!$modifier['sell_line_note']!!}) @endif
-                                                </td>
-                                                <td class="text-right">
-                                                    {{$modifier['quantity']}} {{$modifier['units']}}
-                                                </td>
-                                            </tr>
-                                        @endforeach
-                                    @endif
-                                @endforeach
-
-                                @php
-                                    $lines = count($receipt_details->lines);
-                                @endphp
-
-                                @for ($i = $lines; $i < 3; $i++)
-                                    <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                @endfor
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="row invoice-info color-555" style="page-break-inside: avoid !important">
-                    <div class="col-md-6 invoice-col width-50">
-                        <b class="pull-left">@lang('lang_v1.authorized_signatory')</b>
-                    </div>
-                </div>
-
-                {{-- Barcode --}}
-                @if($receipt_details->show_barcode)
-                    <br>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <img class="center-block" src="data:image/png;base64,{{DNS1D::getBarcodePNG($receipt_details->invoice_no, 'C128', 2,30,array(39, 48, 54), true)}}">
-                        </div>
-                    </div>
+    @if(!empty($receipt_details->table_name) || !empty($receipt_details->table))
+        <div class="textbox-info">
+            <p class="f-left"><strong>
+                @if(!empty($receipt_details->table_label))
+                    {!! $receipt_details->table_label !!}
+                @else
+                    @lang('restaurant.table')
                 @endif
+            </strong></p>
+            <p class="f-right">{{ $receipt_details->table_name ?? $receipt_details->table }}</p>
+        </div>
+    @endif
 
-                @if(!empty($receipt_details->footer_text))
-                    <div class="row color-555">
-                        <div class="col-xs-12">
-                            {!! $receipt_details->footer_text !!}
-                        </div>
-                    </div>
+    @if(!empty($receipt_details->date_label))
+        <div class="textbox-info">
+            <p class="f-left"><strong>{{ $receipt_details->date_label }}</strong></p>
+            <p class="f-right">{{ $receipt_details->invoice_date }}</p>
+        </div>
+    @endif
+
+    <table class="border-bottom width-100 table-f-12 packing-slip-lines">
+        <thead class="border-bottom-dotted">
+            <tr>
+                <th class="serial_number">#</th>
+                <th class="description">{{ $receipt_details->table_product_label }}</th>
+                <th class="quantity text-right">{{ $receipt_details->table_qty_label }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($receipt_details->lines as $line)
+                <tr>
+                    <td class="serial_number" style="vertical-align: top;">
+                        {{ $loop->iteration }}
+                    </td>
+                    <td class="description bw">
+                        {{ $line['name'] }} {{ $line['product_variation'] }} {{ $line['variation'] }}
+                        @if(!empty($line['sub_sku'])), {{ $line['sub_sku'] }} @endif
+                        @if(!empty($line['brand'])), {{ $line['brand'] }} @endif
+                        @if(!empty($line['product_custom_fields'])), {{ $line['product_custom_fields'] }} @endif
+                        @if(!empty($line['sell_line_note']))
+                            <br><span class="f-8">{!! $line['sell_line_note'] !!}</span>
+                        @endif
+                        @if(!empty($line['lot_number']))
+                            <br>{{ $line['lot_number_label'] }}: {{ $line['lot_number'] }}
+                        @endif
+                        @if(!empty($line['product_expiry']))
+                            , {{ $line['product_expiry_label'] }}: {{ $line['product_expiry'] }}
+                        @endif
+                    </td>
+                    <td class="quantity text-right" style="vertical-align: top;">
+                        {{ $line['quantity'] }} {{ $line['units'] }}
+                    </td>
+                </tr>
+                @if(!empty($line['modifiers']))
+                    @foreach($line['modifiers'] as $modifier)
+                        <tr>
+                            <td class="serial_number">&nbsp;</td>
+                            <td class="description bw">
+                                {{ $modifier['name'] }} {{ $modifier['variation'] }}
+                                @if(!empty($modifier['sub_sku'])), {{ $modifier['sub_sku'] }} @endif
+                                @if(!empty($modifier['sell_line_note']))
+                                    <span class="f-8">({!! $modifier['sell_line_note'] !!})</span>
+                                @endif
+                            </td>
+                            <td class="quantity text-right">
+                                {{ $modifier['quantity'] }} {{ $modifier['units'] }}
+                            </td>
+                        </tr>
+                    @endforeach
                 @endif
+            @endforeach
+        </tbody>
+    </table>
 
-            </td>
-        </tr>
-    </tbody>
-</table>
+    <div class="textbox-info" style="page-break-inside: avoid;">
+        <p class="f-left"><strong>@lang('lang_v1.authorized_signatory')</strong></p>
+    </div>
+
+    @if($receipt_details->show_barcode)
+        <div class="centered" style="margin-top: 8px;">
+            <img class="packing-slip-barcode" src="data:image/png;base64,{{ DNS1D::getBarcodePNG($receipt_details->invoice_no, 'C128', 2, 30, [39, 48, 54], true) }}" alt="">
+        </div>
+    @endif
+
+    @if(!empty($receipt_details->footer_text))
+        <p class="centered" style="margin-top: 8px;">
+            {!! $receipt_details->footer_text !!}
+        </p>
+    @endif
+</div>
+
+<style type="text/css">
+.packing-slip-ticket {
+    width: 100%;
+    max-width: 80mm;
+    margin: 0 auto;
+    color: #000000;
+}
+
+.packing-slip-ticket p {
+    margin-bottom: 0;
+}
+
+.packing-slip-ticket .headings {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.packing-slip-ticket .border-top {
+    border-top: 1px solid #242424;
+}
+
+.packing-slip-ticket .border-bottom {
+    border-bottom: 1px solid #242424;
+}
+
+.packing-slip-ticket .border-bottom-dotted {
+    border-bottom: 1px dotted darkgray;
+}
+
+.packing-slip-ticket .textbox-info {
+    clear: both;
+    overflow: hidden;
+}
+
+.packing-slip-ticket .textbox-info p {
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.packing-slip-ticket .f-left {
+    float: left;
+    text-align: left;
+}
+
+.packing-slip-ticket .f-right {
+    float: right;
+    text-align: right;
+}
+
+.packing-slip-ticket .centered {
+    text-align: center;
+}
+
+.packing-slip-ticket .text-right {
+    text-align: right;
+}
+
+.packing-slip-ticket .width-100 {
+    width: 100%;
+}
+
+.packing-slip-ticket .table-f-12 th,
+.packing-slip-ticket .table-f-12 td {
+    font-size: 12px;
+    word-break: break-word;
+    padding: 2px 0;
+}
+
+.packing-slip-ticket .packing-slip-lines {
+    margin-top: 8px;
+    border-collapse: collapse;
+}
+
+.packing-slip-ticket td.serial_number,
+.packing-slip-ticket th.serial_number {
+    width: 8%;
+    max-width: 8%;
+}
+
+.packing-slip-ticket td.description,
+.packing-slip-ticket th.description {
+    width: 62%;
+    max-width: 62%;
+}
+
+.packing-slip-ticket td.quantity,
+.packing-slip-ticket th.quantity {
+    width: 30%;
+    max-width: 30%;
+}
+
+.packing-slip-ticket .bw {
+    word-break: break-word;
+}
+
+.packing-slip-ticket .f-8 {
+    font-size: 10px;
+}
+
+.packing-slip-ticket .packing-slip-barcode {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@page {
+    size: 3.1in auto;
+    margin: 2mm 1mm;
+}
+
+@media print {
+    .packing-slip-ticket,
+    .packing-slip-ticket * {
+        font-size: 12px;
+        font-family: 'Times New Roman', serif;
+        color: #000000 !important;
+    }
+
+    .packing-slip-ticket {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .packing-slip-ticket .headings {
+        font-size: 14px;
+    }
+
+    .packing-slip-ticket .f-8 {
+        font-size: 10px !important;
+    }
+
+    .packing-slip-ticket .table-f-12 th,
+    .packing-slip-ticket .table-f-12 td {
+        font-size: 12px;
+    }
+}
+</style>
