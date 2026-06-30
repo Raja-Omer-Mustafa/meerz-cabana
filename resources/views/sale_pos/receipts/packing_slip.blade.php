@@ -65,6 +65,16 @@
                             {{$receipt_details->invoice_no}}
                         </p>
 
+                        @if(!empty($receipt_details->table_name))
+                            <p class="text-right font-23">
+                                <span class="pull-left">
+                                    Table Label:
+                                </span>
+
+                                {{ $receipt_details->table_name }}
+                            </p>
+                        @endif
+
                         <!-- Date -->
                         @if(!empty($receipt_details->date_label))
                             <p class="text-right font-23 color-555">
@@ -74,7 +84,7 @@
 
                                 {{$receipt_details->invoice_date}}
                             </p>
-                        @endif
+                        @endif                        
                     </div>
                 </div>
 
