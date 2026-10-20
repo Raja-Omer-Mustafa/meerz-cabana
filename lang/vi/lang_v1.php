@@ -666,6 +666,7 @@ return [
     'total_purchase_price' => 'Tổng giá mua',
     'total_sell_price' => 'Tổng giá bán',
     'packing_slip' => 'Phiếu đóng gói',
+    'token' => 'Phiếu',
     'use_superadmin_email_settings' => 'Sử dụng cấu hình email hệ thống',
     'profit_by_products' => 'Lợi nhuận theo sản phẩm',
     'profit_by_categories' => 'Lợi nhuận theo danh mục',

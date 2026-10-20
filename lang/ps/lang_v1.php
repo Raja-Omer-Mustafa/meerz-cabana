@@ -646,6 +646,7 @@ return [
     'total_purchase_price' => 'د پیرود مجموعه',
     'total_sell_price' => 'د پلور مجموعه نرخ',
     'packing_slip' => 'د بسته بندۍ ',
+    'token' => 'ټوکن',
     'use_superadmin_email_settings' => 'د سیسټم بریښنالیک تشکیلات وکاروئ',
     'profit_by_products' => 'د محصولاتو لخوا ګټه',
     'profit_by_categories' => 'د کټګوریو لخوا ګټې',

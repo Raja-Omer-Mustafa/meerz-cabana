@@ -637,6 +637,7 @@ return [
     'total_purchase_price' => 'Pricemimi total i blerjes',
     'total_sell_price' => 'Pricemimi total i shitjes',
     'packing_slip' => 'Paketimi Slip',
+    'token' => 'Biletë',
     'use_superadmin_email_settings' => 'Përdorni konfigurimin e postës elektronike të sistemit',
     'profit_by_products' => 'Fitimi nga produktet',
     'profit_by_categories' => 'Fitimi sipas kategorive',

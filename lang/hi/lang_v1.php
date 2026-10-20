@@ -636,6 +636,7 @@ return [
     'total_purchase_price' => 'कुल खरीद मूल्य',
     'total_sell_price' => 'कुल बिक्री मूल्य',
     'packing_slip' => 'पैकिंग पर्ची',
+    'token' => 'टोकन',
     'use_superadmin_email_settings' => 'सिस्टम ईमेल कॉन्फ़िगरेशन का उपयोग करें',
     'profit_by_products' => 'उत्पादों द्वारा लाभ',
     'profit_by_categories' => 'श्रेणियों द्वारा लाभ',

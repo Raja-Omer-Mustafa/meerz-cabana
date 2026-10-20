@@ -1,6 +1,6 @@
 <div class="ticket packing-slip-ticket">
     <p class="centered headings">
-        @lang('lang_v1.packing_slip')
+        @lang('lang_v1.token')
     </p>
 
     <div class="border-top textbox-info">

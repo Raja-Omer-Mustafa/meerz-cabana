@@ -636,6 +636,7 @@ return [
     'total_purchase_price' => 'Precio total de compra',
     'total_sell_price' => 'Precio de venta total',
     'packing_slip' => 'Hoja de embalaje',
+    'token' => 'Ficha',
     'use_superadmin_email_settings' => 'Usar configuraciones de correo electrónico del sistema',
     'profit_by_products' => 'Beneficio por productos',
     'profit_by_categories' => 'Beneficio por categorías',

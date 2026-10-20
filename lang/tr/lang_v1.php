@@ -641,6 +641,7 @@ return [
     'total_purchase_price' => 'Toplam alış fiyatı',
     'total_sell_price' => 'Toplam satış fiyatı',
     'packing_slip' => 'Ambalaj Fişi',
+    'token' => 'Fiş',
     'use_superadmin_email_settings' => 'Sistem e-posta yapılandırmalarını kullan',
     'profit_by_products' => 'Ürünlere göre kar',
     'profit_by_categories' => 'Kategorilere göre kar',
