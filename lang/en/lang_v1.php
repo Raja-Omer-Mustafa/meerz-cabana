@@ -662,6 +662,7 @@ return [
     'total_purchase_price' => 'Total purchase price',
     'total_sell_price' => 'Total sell price',
     'packing_slip' => 'Packing Slip',
+    'token' => 'Token',
     'use_superadmin_email_settings' => 'Use system email configurations',
     'profit_by_products' => 'Profit by products',
     'profit_by_categories' => 'Profit by categories',

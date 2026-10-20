@@ -659,6 +659,7 @@ return [
     'total_purchase_price' => 'ລາຄາຊື້ທັງໝົດ',
     'total_sell_price' => 'ລາຄາຂາຍທັງໝົດ',
     'packing_slip' => 'ສະສິບບັນຈຸພັນ',
+    'token' => 'ໂທເຄັນ',
     'use_superadmin_email_settings' => 'ໃຊ້ການຕັ້ງຄ່າອີເມວຂອງລະບົບ',
     'profit_by_products' => 'ກຳໄລຕາມສິນຄ້າ',
     'profit_by_categories' => 'ກຳໄລຕາໝວກໝູ່',

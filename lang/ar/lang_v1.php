@@ -635,6 +635,7 @@ return [
     'total_purchase_price' => 'إجمالي سعر الشراء',
     'total_sell_price' => 'إجمالي سعر البيع',
     'packing_slip' => 'التعبئة',
+    'token' => 'تذكرة',
     'use_superadmin_email_settings' => 'استخدام تكوينات البريد الإلكتروني للنظام',
     'profit_by_products' => 'الربح من المنتجات',
     'profit_by_categories' => 'الربح حسب الفئات',

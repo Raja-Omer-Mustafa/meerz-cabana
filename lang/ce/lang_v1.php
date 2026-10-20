@@ -656,6 +656,7 @@ return [
     'total_purchase_price' => '总购买价',
     'total_sell_price' => '总售价',
     'packing_slip' => '装箱单',
+    'token' => '号牌',
     'use_superadmin_email_settings' => '使用系统电子邮件配置',
     'profit_by_products' => '产品获利',
     'profit_by_categories' => '按类别划分的利润',

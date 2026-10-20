@@ -636,6 +636,7 @@ return [
     'total_purchase_price' => 'Gesamtkaufpreis',
     'total_sell_price' => 'Gesamtverkaufspreis',
     'packing_slip' => 'Packzettel',
+    'token' => 'Bon',
     'use_superadmin_email_settings' => 'System-E-Mail-Konfigurationen verwenden',
     'profit_by_products' => 'Profit durch Produkte',
     'profit_by_categories' => 'Profit nach Kategorien',

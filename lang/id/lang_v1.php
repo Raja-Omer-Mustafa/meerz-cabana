@@ -630,6 +630,7 @@ return [
     'total_purchase_price' => 'Total harga pembelian',
     'total_sell_price' => 'Total harga jual',
     'packing_slip' => 'Packing Slip',
+    'token' => 'Token',
     'use_superadmin_email_settings' => 'Gunakan konfigurasi email sistem',
     'profit_by_products' => 'Untung dari produk',
     'profit_by_categories' => 'Untung berdasarkan kategori',

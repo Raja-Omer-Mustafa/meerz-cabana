@@ -635,6 +635,7 @@ return [
     'total_purchase_price' => 'Totale aankoopprijs',
     'total_sell_price' => 'Totale verkoopprijs',
     'packing_slip' => 'Pakbon',
+    'token' => 'Bon',
     'use_superadmin_email_settings' => 'Gebruik systeem e-mailconfiguraties',
     'profit_by_products' => 'Winst door producten',
     'profit_by_categories' => 'Winst per categorie',

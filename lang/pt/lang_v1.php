@@ -665,6 +665,7 @@ return [
     'total_purchase_price' => 'Preço total de compra',
     'total_sell_price' => 'Preço total de venda',
     'packing_slip' => 'Talão de embalagem',
+    'token' => 'Senha',
     'use_superadmin_email_settings' => 'Usar configurações de email do sistema',
     'profit_by_products' => 'Lucro por produtos',
     'profit_by_categories' => 'Lucro por categorias',

@@ -637,6 +637,7 @@ return [
     'total_purchase_price' => "Prix d'achat total",
     'total_sell_price' => 'Prix de vente total',
     'packing_slip' => 'Bordereau',
+    'token' => 'Ticket',
     'use_superadmin_email_settings' => 'Utiliser les configurations de messagerie du système',
     'profit_by_products' => 'Profit par produits',
     'profit_by_categories' => 'Bénéfice par catégories',
